@@ -1,15 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <Agenda :tasks="agenda" />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Agenda from "./components/Agenda.vue";
 
 export default {
   name: "App",
+  data() {
+    return {
+      agenda: [
+        "Підготовка середовища розробки",
+        "Створення нового проекту за допомогою vue-cli",
+        "Базовий Vue",
+        "Розгортання проекту на Netlify",
+        "Наступні кроки.",
+      ],
+    };
+  },
   components: {
-    HelloWorld,
+    Agenda,
   },
 };
 </script>
